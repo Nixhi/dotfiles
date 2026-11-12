@@ -1,0 +1,29 @@
+# ~/.config/atuin/config.toml
+
+## Paths
+
+# Data
+data_dir = "~/.local/share/atuin"
+
+# Database
+db_path = "~/.local/share/atuin/history.db"
+
+## Options
+
+# Dialect
+dialect = "uk"
+
+# Timezone
+timezone = "local"
+
+# Style
+style = "auto"
+
+# Search mode
+search_mode = "fuzzy"
+
+# Enter accept
+enter_accept = false
+
+# Show preview
+show_preview = true

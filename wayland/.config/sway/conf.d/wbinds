@@ -1,0 +1,51 @@
+# Desktop binds
+
+# Desktops list
+bindsym Super+1 workspace 1
+bindsym Super+2 workspace 2
+bindsym Super+3 workspace 3
+bindsym Super+4 workspace 4
+bindsym Super+5 workspace 5
+bindsym Super+6 workspace 6
+bindsym Super+7 workspace 7
+bindsym Super+8 workspace 8
+bindsym Super+9 workspace 9
+
+bindsym Super+F1 mode "default"
+bindsym Super+F2 mode "Window"
+
+# Prev/Next Desktop
+bindsym Control+Tab workspace prev
+bindsym Alt+Tab workspace next
+
+# Win Focus
+bindsym Super+Control+Right focus right
+bindsym Super+Control+Left focus left
+
+bindsym Super+Control+Down focus down
+bindsym Super+Control+Up focus up
+
+# Win Moving
+bindsym Super+Shift+Right move right
+bindsym Super+Shift+Left move left
+
+bindsym Super+Shift+Down move down
+bindsym Super+Shift+Up move up
+
+# Win Resize
+bindsym Super+Alt+Left resize grow width 10px
+bindsym Super+Alt+Right resize shrink width 10px
+
+bindsym Super+Alt+Down resize shrink height 10px
+bindsym Super+Alt+Up resize grow height 10px
+
+# Move window to workspaces
+bindsym Super+Shift+1 move container to workspace 1
+bindsym Super+Shift+2 move container to workspace 2
+bindsym Super+Shift+3 move container to workspace 3
+bindsym Super+Shift+4 move container to workspace 4
+bindsym Super+Shift+5 move container to workspace 5
+bindsym Super+Shift+6 move container to workspace 6
+bindsym Super+Shift+7 move container to workspace 7
+bindsym Super+Shift+8 move container to workspace 8
+bindsym Super+Shift+9 move container to workspace 9

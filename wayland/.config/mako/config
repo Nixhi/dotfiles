@@ -1,0 +1,71 @@
+# ~/.config/mako/config
+
+## General
+
+# Font
+font=JetbrainsMono 10
+actions=1
+markup=1
+
+# Geometry
+text-alignment=left
+icon-location=left
+anchor=top-right
+max-visible=5
+height=150
+padding=15
+width=300
+layer=top
+
+## History
+
+# History mode
+history=1
+
+# History limit
+max-history=20
+
+## Appearance
+
+# Border
+border-radius=5
+border-size=1
+
+# Icons mode
+icons=1
+
+# Icons
+icon-path=/usr/share/icons/Papirus
+icon-border-radius=5
+max-icon-size=64
+
+## Notify decor
+
+[urgency=low]
+progress-color=over #55f6f7dd
+background-color=#242424aa
+border-color=#242424aa
+default-timeout=3000
+text-color=#ffffff
+
+[urgency=normal]
+progress-color=over #f6f7dd
+background-color=#242424aa
+border-color=#242424aa
+default-timeout=5000
+text-color=#ffffff
+
+[urgency=critical]
+progress-color=over #f6f7dd
+background-color=#aa1a1a1a
+border-color=#ff5555
+text-color=#ffffff
+default-timeout=0
+
+[hidden]
+background-color=#242424aa
+border-color=#242424aa
+text-color=#ffffff
+
+[mode=do-not-disturb]
+invisible=1

@@ -1,0 +1,11 @@
+# ~/.config/cava/config
+
+[input]
+method = pipewire
+source = auto
+
+[color]
+foreground = blue
+
+[smoothing]
+monstercat = 1

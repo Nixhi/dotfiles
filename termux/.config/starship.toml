@@ -1,0 +1,63 @@
+# ~/.config/starship.toml
+
+## Global
+
+# Newline
+add_newline = false
+
+# Left format
+format = "${directory}${git_branch} ${character}"
+
+# Right format
+right_format = "${git_status}${cmd_duration} ${time}"
+
+## Modules
+
+[directory]
+disabled = false
+truncation_length = 2
+truncate_to_repo = true
+format = "[$path]($style)"
+style = "bold #13C299"
+
+[cmd_duration]
+disabled = false
+min_time = 2_000
+format = " [$duration]($style)"
+style = "bold #13C299"
+
+[character]
+disabled = false
+success_symbol = "[\\)](bold #2ECC71)"
+error_symbol = "[\\(](bold #FF0000)"
+
+[time]
+disabled = false
+time_format = "%R"
+format = "[$time]($style)"
+style = "bold #8B5CF6"
+
+[git_branch]
+disabled = false
+symbol = " "
+format = "[$symbol$branch]($style)"
+style = "bold #FC4E03"
+
+[git_status]
+disabled = false
+ignore_submodules = true
+format = "[$all_status$ahead_behind]($style)"
+style = "bold #FC4E03"
+ahead = " ⇡$count"
+behind = " ⇣$count"
+diverged = " ⇕$count"
+conflicted = " !$count"
+untracked = " ?$count"
+stashed = " &$count"
+modified = " *$count"
+staged = " +$count"
+renamed = " ~$count"
+deleted = " -$count"
+
+[package]
+disabled = true

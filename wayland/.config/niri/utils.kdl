@@ -1,0 +1,20 @@
+// ~/.config/niri/Utils.kdl
+
+/* --- Geleral --- */
+
+// Terminal Server
+spawn-at-startup "foot" "--server"
+
+// Clipboard
+spawn-at-startup "clipse" "-listen"
+
+// Wallpapers
+spawn-at-startup "awww-daemon"
+
+// Notify
+spawn-at-startup "mako"
+
+/* --- Other --- */
+
+// Wallpapers
+spawn-sh-at-startup "awww img ~/Pictures/Wallpapers/NightCity.jpg"

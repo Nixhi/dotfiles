@@ -1,0 +1,12 @@
+# ~/.config/sway/config
+
+# Include Files
+include ~/.config/sway/conf.d/*
+
+## Daemons
+
+# Terminal Server
+exec foot --server
+
+# Notifications
+exec mako

@@ -1,0 +1,200 @@
+// ~/.config/niri/config.kdl
+
+/* --- Geleral --- */
+
+// Include files
+include "utils.kdl"
+
+// Hide headers
+prefer-no-csd
+
+// Blur
+blur {
+    off
+}
+
+// Input
+input {
+    focus-follows-mouse
+}
+
+// Animations
+animations {
+
+    // Status
+    on
+    
+    // Window resize
+    window-resize {
+        off
+    }
+  
+    // Workspace switch
+    workspace-switch {
+        
+        // Spring
+        spring damping-ratio=1.5 stiffness=1000 epsilon=0.0001
+    }
+}
+
+// Layout
+layout {
+
+    // Gaps
+    gaps 6
+    
+    // Shadow
+    shadow {
+        off
+    }
+
+    // Focus Ring #13C299
+    focus-ring { 
+        off
+        width 3
+        active-color "#FF4500"
+        inactive-color "#242424"
+    }
+
+    // Border #13C299
+    border {
+        on
+        width 3
+        active-color "#FF4500"
+        inactive-color "#242424"
+    }
+}
+
+// Hotkeys window
+hotkey-overlay {
+    skip-at-startup
+}
+
+// Key binds
+binds {
+    
+    /* Programs */
+    
+    // Terminal
+    Mod+T repeat=false hotkey-overlay-title="Open a Terminal: foot" { spawn "footclient"; }
+    
+    // Launcher
+    Mod+E repeat=false hotkey-overlay-title="Run an Launcher: rofi" { spawn-sh "rofi -show drun"; }
+    
+    // Emoji
+    Mod+Period repeat=false hotkey-overlay-title="Emoji: rofi-emoji" { spawn-sh "rofi -show emoji"; }
+    
+    // Lock Screen
+    Mod+L repeat=false hotkey-overlay-title="Lock the Desktop: waylock" { spawn "waylock"; }
+    
+    /* Service */
+    
+    // Show Binds
+    Mod+Slash { show-hotkey-overlay; }
+    
+    // Exit Niri
+    Ctrl+Alt+Delete { quit; }
+    
+    /* Media */
+    
+    // Full screenshot
+    Print { screenshot; }
+    
+    // Ext screenshot
+    Shift+Print { screenshot-screen; }
+    Ctrl+Print { screenshot-window; }
+    
+    // Volume up/down
+    XF86AudioRaiseVolume { spawn-sh "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"; }
+    XF86AudioLowerVolume { spawn-sh "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"; }
+    
+    /* Windows */
+    
+    // Close window
+    Mod+Q { close-window; }
+    
+    // Maximize column
+    Mod+G { maximize-column; }
+    
+    // Overview mode
+    Mod+O { toggle-overview; }
+    
+    // Fullscreen mode
+    Mod+F { fullscreen-window; }
+    
+    // Focus column
+    Mod+Ctrl+Left { focus-column-left; }
+    Mod+Ctrl+Down { focus-window-down; }
+    Mod+Ctrl+Up { focus-window-up; }
+    Mod+Ctrl+Right { focus-column-right; }
+    
+    // Move column
+    Mod+Shift+Left { move-column-left; }
+    Mod+Shift+Down { move-window-down; }
+    Mod+Shift+Up { move-window-up; }
+    Mod+Shift+Right { move-column-right; }
+    
+    // Focus column first/last
+    Mod+Ctrl+A { focus-column-first; }
+    Mod+Ctrl+D { focus-column-last; }
+    
+    // Move column to first/last
+    Mod+Shift+A { move-column-to-first; }
+    Mod+Shift+D { move-column-to-last; }
+    
+    // Focus workspaces
+    Mod+Ctrl+S { focus-workspace-down; }
+    Mod+Ctrl+W { focus-workspace-up; }
+    
+    // Move column to workspace via wheel
+    Mod+WheelScrollDown { move-column-to-workspace-down; }
+    Mod+WheelScrollUp { move-column-to-workspace-up; }
+    
+    // Move column to workspace
+    Mod+Shift+S { move-column-to-workspace-down; }
+    Mod+Shift+W { move-column-to-workspace-up; }
+    
+    // Column width
+    Mod+Ctrl+Minus { set-column-width "-10%"; }
+    Mod+Ctrl+Equal { set-column-width "+10%"; }
+    
+    // Window height
+    Mod+Alt+Minus { set-window-height "-10%"; }
+    Mod+Alt+Equal { set-window-height "+10%"; }
+    
+    // Consume or expel windows
+    Mod+Shift+BracketLeft { consume-or-expel-window-left; }
+    Mod+Shift+BracketRight { consume-or-expel-window-right; }
+    
+    // Uni/Sep column
+    Mod+Shift+Comma { consume-window-into-column; }
+    Mod+Shift+Period { expel-window-from-column; }
+    
+    
+    // Center column 
+    Mod+Shift+C { center-column; }
+    
+    // Center visible Column
+    Mod+Alt+C { center-visible-columns; }
+    
+    
+    // Floating and tiling
+    Mod+Ctrl+X { switch-focus-between-floating-and-tiling; }
+    
+    
+    // Toggle window floating
+    Mod+Shift+X { toggle-window-floating; }
+    
+    
+    // Tab mode
+    Mod+Shift+Z { toggle-column-tabbed-display; }
+    
+    
+    // Switch focus
+    Mod+Tab { focus-workspace-previous; }
+}
+
+/* --- Other --- */
+
+// Screenshot path
+screenshot-path "~/Pictures/Screenshots/Screenshot-%Y-%m-%d-%H-%M-%S.png"

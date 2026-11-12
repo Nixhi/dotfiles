@@ -1,0 +1,10 @@
+# Output
+
+# Wallpaper
+output * bg ~/.config/wallpapers/NeonLightSun.jpg fill
+
+# Font
+font pango:JetBrainsMono Nerd 12
+
+# Disable XWayland
+xwayland disabled

@@ -1,0 +1,22 @@
+# Desktop Config
+
+# Gaps
+gaps inner 4
+gaps outer 2
+
+# Border
+default_border pixel 2
+
+# Color window
+client.focused #13C299 #242424AA #FFFFFF #242424AA #13C299
+client.unfocused #586E75 #242424AA #FFFFFF #242424AA #586E75
+
+# Bar
+bar {
+  strip_workspace_numbers no
+  position bottom
+  colors {
+    statusline #ffffffff
+    background #242424AA
+  }
+}

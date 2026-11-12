@@ -1,0 +1,18 @@
+# Default Bindings
+
+# Programs
+set $term foot
+set $menu fuzzel
+set $tecl footclient
+
+# Programs
+bindsym --no-repeat Super+T exec $term
+bindsym --no-repeat Super+D exec $menu
+bindsym --no-repeat Super+C exec $tecl
+
+# Sway service
+bindsym Super+P reload
+bindsym Super+Q kill
+
+# Exit Sway
+bindsym Control+Alt+Delete exit
