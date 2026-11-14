@@ -1,15 +1,15 @@
 // ~/.config/niri/Utils.kdl
 
-/* --- Geleral --- */
-
-// Terminal Server
-spawn-at-startup "foot" "--server"
+/* --- General --- */
 
 // Clipboard
 spawn-at-startup "clipse" "-listen"
 
 // Wallpapers
 spawn-at-startup "awww-daemon"
+
+// Panel (shell)
+spawn-at-startup "ashell"
 
 // Notify
 spawn-at-startup "mako"

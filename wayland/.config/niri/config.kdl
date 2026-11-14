@@ -1,9 +1,9 @@
 // ~/.config/niri/config.kdl
 
-/* --- Geleral --- */
+/* --- General --- */
 
 // Include files
-include "utils.kdl"
+include "launch.kdl"
 
 // Hide headers
 prefer-no-csd
@@ -76,7 +76,7 @@ binds {
     /* Programs */
     
     // Terminal
-    Mod+T repeat=false hotkey-overlay-title="Open a Terminal: foot" { spawn "footclient"; }
+    Mod+T repeat=false hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     
     // Launcher
     Mod+E repeat=false hotkey-overlay-title="Run an Launcher: rofi" { spawn-sh "rofi -show drun"; }
@@ -85,7 +85,8 @@ binds {
     Mod+Period repeat=false hotkey-overlay-title="Emoji: rofi-emoji" { spawn-sh "rofi -show emoji"; }
     
     // Lock Screen
-    Mod+L repeat=false hotkey-overlay-title="Lock the Desktop: waylock" { spawn "waylock"; }
+    Mod+L repeat=false hotkey-overlay-title="Lock the Desktop: swaylock" { spawn "swaylock"; }
+    
     
     /* Service */
     
@@ -94,6 +95,7 @@ binds {
     
     // Exit Niri
     Ctrl+Alt+Delete { quit; }
+    
     
     /* Media */
     
@@ -107,6 +109,7 @@ binds {
     // Volume up/down
     XF86AudioRaiseVolume { spawn-sh "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"; }
     XF86AudioLowerVolume { spawn-sh "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"; }
+    
     
     /* Windows */
     
